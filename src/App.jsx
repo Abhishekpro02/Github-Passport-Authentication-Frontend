@@ -21,7 +21,7 @@ const App = () => {
         const res = await axios.get(`${BASE_URL}/api/v1/profile`, {
           withCredentials: true,
         });
-        console.log(res.data);
+        console.log(res);
         dispatch(userExits(res.data.user));
       };
       checkUserLoggedIn();
