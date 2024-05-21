@@ -4,7 +4,7 @@ const RepoList = () => {
   const { data, isLoading } = useGetUserReposQuery();
 
   const repos = data?.data;
-  console.log(repos);
+  console.log(data);
 
   if (isLoading) {
     return <div className="text-center mt-10">Loading...</div>;
@@ -16,7 +16,7 @@ const RepoList = () => {
         GitHub Repositories
       </h1>
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {repos.map((repo) => (
+        {repos?.map((repo) => (
           <li key={repo.id} className="bg-lime-400 p-6 rounded-lg shadow-md">
             <h2 className="text-xl text-purple-600 font-semibold">
               {repo.name}
