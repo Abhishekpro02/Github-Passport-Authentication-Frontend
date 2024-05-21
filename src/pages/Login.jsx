@@ -1,5 +1,4 @@
 import { FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { BASE_URL } from "../utils/constant";
 
 const LoginPage = () => {
